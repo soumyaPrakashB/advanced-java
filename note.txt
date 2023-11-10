@@ -1,0 +1,74 @@
+-> JSP pages must have .jsp extensions.
+-> JSP pages get processed in the server(tomcat/JBoss/WebSphere).
+-> JSP pages are just HTMLs with Java code sprinkled in. When server receives a request it processes the request,
+   and send the rendered HTML page to the browser. Browser doesn't know about the Java code.
+-> We can put JSP scripting elements in the JSP file in the below 3 ways:
+
+		1. JSP Expression: <%= Java expression %>
+			eg. <% new java.util.Date() %> // The expression is evaluated and the result is included in the final HTML
+		
+		2. JSP Scriptlet: <% Java code, 1 to many lines %>
+			eg. <% 
+					for(int i = 0; i < 10; i++) {
+						out.println(i);
+					}
+				%>
+		
+		3. JSP Declarations: <%! variable or method declarations %>
+			eg. <%!
+					int addOne(int input) {
+						return input + 1;
+					}
+				%>
+   
+-> Call Java class from JSP
+===========================
+
+Use fully qualified package name to call methods of a class.
+
+Alternatively, import statements could be used.
+
+	<%@ page import="com.example.jsp.*" %>
+
+
+-> Built-In Server Objects
+==========================
+
+These objects can be used directly in JSP pages.
+
+Commonly used JSP objects:
+	
+	Object					Description
+	===========================================================================
+	request					Contains HTTP request headers and form data
+	response				Provides HTTP support for sending response
+	out						JspWriter for including content in HTML page
+	session 				Unique session for each user of the web application
+	application				Shared data for all users of the web application
+	
+	
+-> Including Files in JSP
+=========================
+You can include JSP or HTML files to another JSP file.
+
+The syntax is as below:
+		<jsp:include page="file-name.extension" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
