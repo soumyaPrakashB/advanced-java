@@ -1,11 +1,11 @@
 -> JSP pages must have .jsp extensions.
--> JSP pages get processed in the server(tomcat/JBoss/WebSphere).
+-> JSP pages get processed in the server(tomcat/JBoss/WebSphere...).
 -> JSP pages are just HTMLs with Java code sprinkled in. When server receives a request it processes the request,
    and send the rendered HTML page to the browser. Browser doesn't know about the Java code.
 -> We can put JSP scripting elements in the JSP file in the below 3 ways:
 
 		1. JSP Expression: <%= Java expression %>
-			eg. <% new java.util.Date() %> // The expression is evaluated and the result is included in the final HTML
+			eg. <%= new java.util.Date() %> // The expression is evaluated and the result is included in the final HTML
 		
 		2. JSP Scriptlet: <% Java code, 1 to many lines %>
 			eg. <% 
