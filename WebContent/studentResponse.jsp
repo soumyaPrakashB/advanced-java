@@ -6,6 +6,10 @@
 
 Student is confirmed: ${param.firstName} ${param.lastName}
 
+<br/>
+
+<%= request.getParameter("firstName") %> <%= request.getParameter("lastName") %> belongs to <%= request.getParameter("country") %>
+
 </body>
 
 </html>
